@@ -1,8 +1,9 @@
 s = 'abzcbobobegghakl'
+s1 = s + '_'
 previous = s[0] #assumes greater/equal comparison
 substr = ''
 longest_substr = ''
-for char in s:
+for char in s1:
     if char >= previous:
         substr += char
     else:
@@ -10,6 +11,6 @@ for char in s:
             longest_substr = substr
         substr = char
     previous = char
-#does not work if last substring is the longest
+
 
 print("Longest substring in alphabetical order is:",longest_substr)
