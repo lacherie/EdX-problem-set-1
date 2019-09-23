@@ -10,6 +10,8 @@ for char in s:
             longest_substr = substr
         substr = char
     previous = char
-#does not work if last substring is the longest
+if len(substr) > len(longest_substr):
+    longest_substr = substr
+        
 
 print("Longest substring in alphabetical order is:",longest_substr)
