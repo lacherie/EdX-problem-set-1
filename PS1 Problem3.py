@@ -11,5 +11,7 @@ for char in str_input:
         else:
             longest_substr = substr
             start_substr = x
+if len(substr) > len(longest_substr):
+    longest_substr = substr
             
 print("Longest substring in alphabetical order is:",longest_substr)
