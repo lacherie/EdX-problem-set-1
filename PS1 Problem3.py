@@ -1,15 +1,15 @@
-start = 0
-x = 0
+s = 'abzcbobobegghakl'
+previous = s[0] #assumes greater/equal comparison
+substr = ''
 longest_substr = ''
-start_substr = 0
-
-for char in str_input:
-    while x in range(x,(len(str_input)-1)):
-        if str_input[x] <= s[x + 1]:
-            substr = s[start_substr : x + 1]
-            x += 1
-        else:
+for char in s:
+    if char >= previous:
+        substr += char
+    else:
+        if len(substr) > len(longest_substr):
             longest_substr = substr
-            start_substr = x
-            
+        substr = char
+    previous = char
+#does not work if last substring is the longest
+
 print("Longest substring in alphabetical order is:",longest_substr)
